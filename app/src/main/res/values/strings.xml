@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Eremit Malaysia DFM Sample</string>
+    <string name="title_dynamicfeature">Eremit Feature</string>
+
+    <string name="ems_app_name"/>
+    <string name="DeeplinkUrl"/>
+    <string name="ems_facebook_app_id"/>
+    <string name="ems_fb_login_protocol_scheme"/>
+    <string name="google_play_services_version"/>
+</resources>

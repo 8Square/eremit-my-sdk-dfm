@@ -1,0 +1,3 @@
+rootProject.name = "Eremit Malaysia DFM Sample"
+include ':app'
+include ':dynamicfeature'

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EmsAppThemeSuccessActivity" />
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" />
+    <style name="EmsPasscodeViewTheme" />
+    <style name="EmsAppThemeHome" />
+    <style name="EmsBlueScreenActivtyTheme" />
+    <style name="EmsDialogActivityTheme" />
+
+</resources>
