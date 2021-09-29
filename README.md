@@ -1,5 +1,5 @@
 # Eremit Malaysia SDK
-This is a Eremit Malaysia SDK sample application with integration steps.
+This is a Eremit Malaysia SDK sample application with a dynamic feature module with integration steps. To create a project with dynamic feature module, see [here](https://developer.android.com/guide/playcore/feature-delivery)
 
 Requirements
 ============
@@ -7,7 +7,7 @@ Requirements
 * Minimum Android SDK Version 21
 * Working front and back camera in device
 
-Size Changes in Dynamic Feature Module
+Size Changes 
 ------------
 * Around 5 MB in main application module
 * Around 35 MB in dynamic feature module
@@ -15,10 +15,11 @@ Size Changes in Dynamic Feature Module
 Integration Steps
 =================
 
-1. Add it in your root build.gradle at the end of repositories
+1. Add it in your root build.gradle at the end of repositories. 
   ```gradle
   allprojects {
     repositories {
+	...//Other repositories	
       maven {
             url "http://maven.eightsquare.co:8081/artifactory/libs-release-local"
             credentials {
@@ -36,6 +37,8 @@ Integration Steps
     }
 }
 ```
+  If you are using Android studio Arctic Fox, follow #7 in notes.
+
 2. Add the below dependency in main application module's build.gradle
 ```gradle
    implementation ("morpho.mph_bio_sdk.android:SmartSDK:4.24.0") {
@@ -65,7 +68,8 @@ Integration Steps
 implementation "com.eightsquarei.eremit:eremitsdk:0.0.1-alpha29"
 ````
 
-5. Add below resources in main application:
+5. Add below resources in main application: 
+
 styles.xml
 ```xml
     <style name="EmsAppThemeSuccessActivity" />
@@ -85,7 +89,7 @@ strings.xml
     <string name="google_play_services_version"/>
 ```
 
-6. Use below code to start eRemit SDK from DFM
+6. Use below code to start eRemit SDK from dynamic feature module
 ```kotlin
 EremitSdk.Builder()
             .apiKey("API_KEY_HERE")
@@ -146,4 +150,39 @@ Notes
     }
   }
   ```
+7. If you are using Android Studio Arctic Fox version or a version with repositories moved to settings.gradle, add the below in settings.gradle 
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        ... // Other repositories
+
+        maven {
+          url "http://maven.eightsquare.co:8081/artifactory/libs-release-local"
+          credentials {
+              username = "####"
+              password = "####"
+          }
+      }
+      maven {
+          url "https://mi-artifactory.otlabs.fr/artifactory/smartsdk"
+          credentials {
+              username "######"
+              password "######"
+          }
+      }
+    }
+}
+```
+
+8. If you receive repository insecure protocols error `Using insecure protocols with repositories, without explicit opt-in, is unsupported. Switch Maven repository 'maven(http://maven.eightsquare.co:8081/artifactory/libs-release-local)' to redirect to a secure protocol (like HTTPS) or allow insecure protocols. See https://docs.gradle.org/7.0.2/dsl/org.gradle.api.artifacts.repositories.UrlArtifactRepository.html#org.gradle.api.artifacts.repositories.UrlArtifactRepository:allowInsecureProtocol for more details. `, apply below fix while defining eightsquare maven repository URL`
+```gradle
+maven {
+        url "http://maven.eightsquare.co:8081/artifactory/libs-release-local"
+        allowInsecureProtocol = true
+	 credentials {
+              username = "####"
+              password = "####"
+          }
+    }
 
