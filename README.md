@@ -37,7 +37,8 @@ Integration Steps
     }
 }
 ```
-If you are using Android studio Arctic Fox, follow this
+  If you are using Android studio Arctic Fox, follow #7 in notes.
+
 2. Add the below dependency in main application module's build.gradle
 ```gradle
    implementation ("morpho.mph_bio_sdk.android:SmartSDK:4.24.0") {
@@ -149,7 +150,7 @@ Notes
     }
   }
   ```
-6. #If you are using Android Studio Arctic Fox version or a version with repositories moved to settings.gradle, add the below in settings.gradle
+7. If you are using Android Studio Arctic Fox version or a version with repositories moved to settings.gradle, add the below in settings.gradle 
 ```gradle
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
