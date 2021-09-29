@@ -175,3 +175,14 @@ dependencyResolutionManagement {
 }
 ```
 
+8. If you receive repository insecure protocols error `Using insecure protocols with repositories, without explicit opt-in, is unsupported. Switch Maven repository 'maven(http://maven.eightsquare.co:8081/artifactory/libs-release-local)' to redirect to a secure protocol (like HTTPS) or allow insecure protocols. See https://docs.gradle.org/7.0.2/dsl/org.gradle.api.artifacts.repositories.UrlArtifactRepository.html#org.gradle.api.artifacts.repositories.UrlArtifactRepository:allowInsecureProtocol for more details. `, apply below fix while defining eightsquare maven repository URL`
+```gradle
+maven {
+        url "http://maven.eightsquare.co:8081/artifactory/libs-release-local"
+        allowInsecureProtocol = true
+	 credentials {
+              username = "####"
+              password = "####"
+          }
+    }
+
