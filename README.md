@@ -89,7 +89,7 @@ strings.xml
     <string name="google_play_services_version"/>
 ```
 
-6. Use below code to start eRemit SDK from DFM
+6. Use below code to start eRemit SDK from dynamic feature module
 ```kotlin
 EremitSdk.Builder()
             .apiKey("API_KEY_HERE")
