@@ -1,5 +1,5 @@
 # Eremit Malaysia SDK
-This is a Eremit Malaysia SDK sample application with integration steps.
+This is a Eremit Malaysia SDK sample application with a dynamic feature module with integration steps. To create a project with dynamic feature module, see [here](https://developer.android.com/guide/playcore/feature-delivery)
 
 Requirements
 ============
@@ -19,6 +19,7 @@ Integration Steps
   ```gradle
   allprojects {
     repositories {
+	...//Other repositories	
       maven {
             url "http://maven.eightsquare.co:8081/artifactory/libs-release-local"
             credentials {
@@ -65,7 +66,8 @@ Integration Steps
 implementation "com.eightsquarei.eremit:eremitsdk:0.0.1-alpha29"
 ````
 
-5. Add below resources in main application:
+5. Add below resources in main application: 
+
 styles.xml
 ```xml
     <style name="EmsAppThemeSuccessActivity" />
