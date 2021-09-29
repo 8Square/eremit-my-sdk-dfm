@@ -7,7 +7,7 @@ Requirements
 * Minimum Android SDK Version 21
 * Working front and back camera in device
 
-Size Changes in Dynamic Feature Module
+Size Changes 
 ------------
 * Around 5 MB in main application module
 * Around 35 MB in dynamic feature module
