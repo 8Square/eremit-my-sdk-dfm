@@ -149,7 +149,7 @@ Notes
     }
   }
   ```
-6. If you are using Android Studio Arctic Fox version or a version with repositories moved to settings.gradle, add the below in settings.gradle
+6. #If you are using Android Studio Arctic Fox version or a version with repositories moved to settings.gradle, add the below in settings.gradle
 ```gradle
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
