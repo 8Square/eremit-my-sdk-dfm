@@ -15,7 +15,7 @@ Size Changes
 Integration Steps
 =================
 
-1. Add it in your root build.gradle at the end of repositories
+1. Add it in your root build.gradle at the end of repositories. 
   ```gradle
   allprojects {
     repositories {
@@ -37,6 +37,7 @@ Integration Steps
     }
 }
 ```
+If you are using Android studio Arctic Fox, follow this
 2. Add the below dependency in main application module's build.gradle
 ```gradle
    implementation ("morpho.mph_bio_sdk.android:SmartSDK:4.24.0") {
@@ -148,4 +149,28 @@ Notes
     }
   }
   ```
+6. If you are using Android Studio Arctic Fox version or a version with repositories moved to settings.gradle, add the below in settings.gradle
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        ... // Other repositories
+
+        maven {
+          url "http://maven.eightsquare.co:8081/artifactory/libs-release-local"
+          credentials {
+              username = "####"
+              password = "####"
+          }
+      }
+      maven {
+          url "https://mi-artifactory.otlabs.fr/artifactory/smartsdk"
+          credentials {
+              username "######"
+              password "######"
+          }
+      }
+    }
+}
+```
 
