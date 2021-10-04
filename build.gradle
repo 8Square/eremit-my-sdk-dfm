@@ -21,7 +21,7 @@ allprojects {
         jcenter() // Warning: this repository is going to shut down soon
 
         maven {
-            url "http://maven.eightsquare.co:8081/artifactory/libs-release-local"
+            url "https://maven.eightsquare.co/artifactory/libs-release-local"
             credentials {
                 username = "####"
                 password = "####"
