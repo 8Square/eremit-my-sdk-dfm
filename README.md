@@ -65,7 +65,7 @@ Integration Steps
 
 4. Add below dependency in dynamic feature module's build.gradle
 ```gradle
-implementation "com.eightsquarei.eremit:eremitsdk:0.0.1-alpha29"
+implementation "com.eightsquarei.eremit:eremitsdk:0.0.1-alpha32"
 ````
 
 5. Add below resources in main application: 
