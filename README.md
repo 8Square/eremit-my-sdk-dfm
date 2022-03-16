@@ -21,7 +21,7 @@ Integration Steps
     repositories {
 	...//Other repositories	
       maven {
-            url "https://maven.eightsquare.co/artifactory/libs-release-local"
+            url "https://maven.vanillatech.asia/artifactory/libs-release-local"
             credentials {
                 username = "####"
                 password = "####"
